@@ -236,6 +236,7 @@ OUTPUT
 
         loop do
           sleep 0.01
+          File.open("tmp/que_heartbeat.txt", "w") {}
           break if $stop_que_executable || locker.stopping?
         end
 
